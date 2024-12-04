@@ -1,7 +1,7 @@
 
-netSalary=() => {
-    const basicSalary = (prompt("Enter Basic Salary"));
-    const benefits = (prompt("Enter Benefits "));
+const netSalary = () => {
+    const basicSalary = Number(prompt("Enter Basic Salary"));
+    const benefits = Number(prompt("Enter Benefits"));
 
     const grossSalary = basicSalary + benefits;
 
@@ -35,7 +35,7 @@ netSalary=() => {
 
     paye = Math.max(paye - personalRelief, 0);
 
-    const shif = grossSalary * 0.0275; 
+    const shif = grossSalary * 0.0275;
 
     const nhiflist = [
         { limit: 5999, deduction: 150 },
@@ -65,12 +65,12 @@ netSalary=() => {
         }
     }
 
-    const nssfRate = 0.06; 
+    const nssfRate = 0.06;
     const Limit1 = 7000;
     const Limit2 = 36000;
 
     const nssf1 = Math.min(grossSalary, Limit1) * nssfRate;
-    const nssf2 = Math.max(Math.min(grossSalary -Limit1, Limit2 - Limit1), 0) * nssfRate;
+    const nssf2 = Math.max(Math.min(grossSalary - Limit1, Limit2 - Limit1), 0) * nssfRate;
     const nssf = nssf1 + nssf2;
 
     const housingLevy = grossSalary * 0.015;
@@ -78,8 +78,13 @@ netSalary=() => {
     const totalDeductions = paye + shif + nhif + nssf + housingLevy;
 
     const netSalary = grossSalary - totalDeductions;
-
-}
+// log netSalary
+    console.log(`Gross Salary: ${grossSalary}`);
+    console.log(`Total Deductions: ${totalDeductions}`);
+    console.log(`Net Salary: ${netSalary}`);
+    return netSalary; 
+};
 
 netSalary();
+
 

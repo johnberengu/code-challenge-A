@@ -33,6 +33,7 @@ Otherwise, it returns the number of demerit points.
 ## Overview
 This program calculates an individual’s Net Salary based on the inputs of Basic Salary and Benefits. It computes various deductions, including PAYE (Tax), NHIF (National Hospital Insurance Fund) contributions, NSSF (National Social Security Fund) contributions, and the final Net Salary.
 
-The program also includes the calculation of the Gross Salary, which is the sum of Basic Salary and Benefits
+The program also includes the calculation of the Gross Salary, which is the sum of Basic Salary and Benefits.
 
-# code-challenge-A
+### AUTHOR
+JOHN BERENGU.

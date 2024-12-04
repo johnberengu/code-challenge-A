@@ -23,5 +23,7 @@ studentMarks=(mark)=>{
     }
 }
 // check if the input is valid
-console.log(studentMarks(marks));
+const numericMarks = Number(marks);
+console.log(studentMarks(numericMarks));
+
 
